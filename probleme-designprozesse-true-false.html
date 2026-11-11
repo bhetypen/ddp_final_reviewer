@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Probleme und Designprozesse verstehen · Richtig oder Falsch</title>
+<style>
+:root{color-scheme:light;--paper:#f5f3ec;--card:#fffef9;--ink:#24312e;--muted:#526159;--green:#234c3e;--line:#c9d4c9;--pale:#e7efe7;--bad:#812d29;--rose:#f8e8e4;--accent:#a24d35}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,sans-serif}button,textarea{font:inherit}button{cursor:pointer;color:var(--green);background:var(--card);border:1px solid var(--line);border-radius:7px;padding:.55rem .85rem;font-weight:650}button:hover:not(:disabled){border-color:var(--green)}button:disabled{opacity:.45;cursor:default}button:focus-visible,textarea:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}button[aria-pressed=true],button.primary{background:var(--green);border-color:var(--green);color:white}.shell{max-width:980px;margin:auto;padding:0 clamp(16px,4vw,32px)}.top{background:var(--card);border-bottom:1px solid var(--line)}.top .shell{display:flex;justify-content:space-between;align-items:center;padding-block:.75rem;gap:.5rem}.brand{font-size:.84rem;font-weight:750;letter-spacing:.04em}.languages,.row,.sets,.numbers{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}.hero{background:var(--green);color:white;padding:clamp(1.8rem,6vw,3.6rem) 0}.hero p{margin:.5rem 0 0;color:#e0eee4}.eyebrow,.meta{font-size:.78rem;font-weight:700;letter-spacing:.065em;text-transform:uppercase}.eyebrow{color:#d0e4d4}h1,h2,h3{line-height:1.23;margin:0}h1{font:clamp(2.2rem,7vw,4rem)/1.08 Georgia,serif;margin:.5rem 0}.layout{display:grid;grid-template-columns:205px minmax(0,1fr);gap:1.3rem;padding-block:1.5rem}.panel,.card,details{background:var(--card);border:1px solid var(--line);border-radius:10px}.panel{padding:1rem;align-self:start}.card{padding:clamp(1rem,4vw,2rem)}.card h2{font:clamp(1.45rem,4vw,2rem)/1.24 Georgia,serif;margin:.6rem 0 1.15rem;overflow-wrap:anywhere}.meta{color:var(--muted)}.between{justify-content:space-between}.sets{margin:.8rem 0}.sets button,.numbers button{min-width:40px;padding:.4rem .55rem}.numbers{margin:1rem 0}.numbers .done:not([aria-pressed=true]){background:var(--pale);border-color:#839e8c}.progress{font-size:.87rem;margin:.6rem 0;color:var(--muted)}progress{width:100%;accent-color:var(--green)}.option{display:flex;align-items:center;width:100%;text-align:left;margin:.55rem 0;gap:.7rem}.option strong{min-width:1.7rem;font-size:.8rem}.option.good{background:var(--pale);border-color:var(--green);color:var(--green)}.option.bad{background:var(--rose);border-color:var(--bad);color:var(--bad)}.response{margin:1rem 0;background:var(--pale);border-left:3px solid var(--green);padding:.75rem 1rem}.response.wrong{background:var(--rose);border-color:var(--bad)}.response p,.card p{margin:.45rem 0}.navigation{margin-top:1rem}textarea{display:block;width:100%;resize:vertical;margin:.4rem 0 .9rem;padding:.65rem;border:1px solid var(--line);background:var(--paper);border-radius:6px}label{font-weight:650}details{padding:1rem;margin:.75rem 0}summary{cursor:pointer;font-weight:700}details details{border-radius:6px}.comparison{width:100%;border-collapse:collapse;margin:.7rem 0}.comparison th,.comparison td{text-align:left;vertical-align:top;padding:.5rem;border-bottom:1px solid var(--line)}.comparison th{width:34%}.warning{color:var(--bad)}footer{border-top:1px solid var(--line);color:var(--muted);font-size:.84rem;padding:1rem 0 2rem}a{color:var(--green)}.skip{position:absolute;left:-9999px}.skip:focus{top:.3rem;left:.3rem;background:white;padding:.5rem}
+@media(max-width:650px){.layout{grid-template-columns:1fr}.panel{padding:.85rem}.sets{margin:.5rem 0}.numbers{margin:.6rem 0}.brand{font-size:.76rem}}
+</style>
+</head>
+<body>
+<noscript>Bitte JavaScript aktivieren. / Please enable JavaScript.</noscript>
+<div id="root"><main class="shell"><p>React wird geladen … / Loading React …</p></main></div>
+<script src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script type="application/json" id="study-data">{"kind": "true-false", "questions": [{"slides": "3", "answer": 1, "de": {"prompt": "„Wir brauchen einen Chatbot“ beschreibt das zugrunde liegende Problem.", "explain": "Der Satz benennt eine vorgeschlagene Funktion. Das Bedürfnis muss erst untersucht werden."}, "en": {"prompt": "“We need a chatbot” describes the underlying problem.", "explain": "The sentence names a proposed feature. The need still needs investigation."}}, {"slides": "4", "answer": 0, "de": {"prompt": "Ein Checkout-Abbruch kann unterschiedliche Ursachen haben.", "explain": "Versandkosten, Zahlungsarten und Pflichtregistrierung sind mögliche Ursachen."}, "en": {"prompt": "Checkout abandonment can have several causes.", "explain": "Shipping costs, payment methods and mandatory registration are possible causes."}}, {"slides": "7–9", "answer": 1, "de": {"prompt": "Im Problemraum geht es primär um die Auswahl eines Prototyps.", "explain": "Im Problemraum werden Bedürfnisse, Ursachen und Kontext untersucht."}, "en": {"prompt": "The problem space primarily concerns selecting a prototype.", "explain": "The problem space investigates needs, causes and context."}}, {"slides": "10–14", "answer": 0, "de": {"prompt": "Reframing kann neue Lösungsansätze eröffnen.", "explain": "Ein neuer Blickwinkel verändert, welche Aspekte und Möglichkeiten sichtbar werden."}, "en": {"prompt": "Reframing can open up new solutions.", "explain": "A different perspective changes which aspects and options become visible."}}, {"slides": "10–14", "answer": 1, "de": {"prompt": "Ein neuer Frame braucht keine Evidenz.", "explain": "Auch eine plausible Sichtweise muss anhand von Forschung überprüft werden."}, "en": {"prompt": "A new frame needs no evidence.", "explain": "Even a plausible perspective should be checked against research."}}, {"slides": "15–21", "answer": 0, "de": {"prompt": "Wicked Problems haben keine objektive Stoppregel.", "explain": "Es gibt keinen eindeutigen Punkt, an dem das Problem endgültig gelöst ist."}, "en": {"prompt": "Wicked problems have no objective stopping rule.", "explain": "There is no clear point at which the problem is definitively solved."}}, {"slides": "15–21", "answer": 1, "de": {"prompt": "Jede technisch schwierige Aufgabe ist ein Wicked Problem.", "explain": "Eine klar spezifizierte Technikaufgabe kann trotz Schwierigkeit eindeutig abgegrenzt sein."}, "en": {"prompt": "Every technically difficult task is a wicked problem.", "explain": "A difficult technical task can still have a well-defined scope."}}, {"slides": "15–21", "answer": 0, "de": {"prompt": "Eingriffe in Wicked Problems können reale, bleibende Folgen haben.", "explain": "Maßnahmen können den Kontext verändern und lassen sich nicht immer folgenlos rückgängig machen."}, "en": {"prompt": "Interventions in wicked problems can have lasting real-world consequences.", "explain": "Actions can change the context and may not be reversible without consequences."}}, {"slides": "22–25", "answer": 1, "de": {"prompt": "Divergenz bedeutet, Alternativen einzugrenzen.", "explain": "Divergenz öffnet den Raum. Konvergenz fokussiert ihn."}, "en": {"prompt": "Divergence means narrowing down alternatives.", "explain": "Divergence opens up the space. Convergence narrows it."}}, {"slides": "22–25", "answer": 0, "de": {"prompt": "Discover und Define bilden den ersten Diamanten.", "explain": "Sie dienen der Untersuchung und Eingrenzung des Problems."}, "en": {"prompt": "Discover and Define form the first diamond.", "explain": "They explore and focus the problem."}}, {"slides": "26–30", "answer": 0, "de": {"prompt": "Beobachtungen können Annahmen über tatsächliches Verhalten infrage stellen.", "explain": "Die Beobachtung liefert Evidenz aus dem Nutzungskontext."}, "en": {"prompt": "Observation can challenge assumptions about actual behavior.", "explain": "Observation provides evidence from the context of use."}}, {"slides": "26–30", "answer": 1, "de": {"prompt": "Die Annahmenmatrix bewertet ausschließlich Wirkung und Aufwand.", "explain": "Sie erfasst hier Annahmen zu Attraktivität, Brauchbarkeit und Realisierbarkeit."}, "en": {"prompt": "The assumption matrix evaluates only impact and effort.", "explain": "Here it captures assumptions about desirability, usability and feasibility."}}, {"slides": "31–33", "answer": 0, "de": {"prompt": "Eine Persona sollte auf Erkenntnissen über Nutzergruppen beruhen.", "explain": "Forschung hilft, erfundene Stereotype zu vermeiden."}, "en": {"prompt": "A persona should be based on evidence about user groups.", "explain": "Research helps avoid invented stereotypes."}}, {"slides": "31–33", "answer": 1, "de": {"prompt": "Eine gute HMW-Frage schreibt bereits einen Push-Button vor.", "explain": "Die Frage soll mehrere Lösungswege zulassen."}, "en": {"prompt": "A good HMW question already prescribes a push button.", "explain": "The question should leave room for several solutions."}}, {"slides": "31–33", "answer": 0, "de": {"prompt": "JTBD fragt nach gewünschtem Fortschritt in einer Situation.", "explain": "Situation, Motivation und Ergebnis helfen, den Job zu formulieren."}, "en": {"prompt": "JTBD asks about desired progress in a situation.", "explain": "Situation, motivation and outcome help frame the job."}}, {"slides": "34–37", "answer": 1, "de": {"prompt": "Hohe Wirkung und hoher Aufwand sind ein Quick Win.", "explain": "Quick Wins kombinieren hohe Wirkung mit geringem Aufwand."}, "en": {"prompt": "High impact and high effort make a quick win.", "explain": "Quick wins combine high impact with low effort."}}, {"slides": "34–37", "answer": 0, "de": {"prompt": "Eine Journey kann Schritte vor und nach der Nutzung zeigen.", "explain": "Sie stellt Handlungen, Kontaktpunkte und Erfahrungen über die Zeit dar."}, "en": {"prompt": "A journey can show steps before and after use.", "explain": "It shows actions, touchpoints and experiences over time."}}, {"slides": "34–37", "answer": 1, "de": {"prompt": "Ein High-Fidelity-Prototyp ist automatisch ein veröffentlichtes MVP.", "explain": "Fidelity beschreibt den Detailgrad. Ein MVP ist eine nutzbare minimale Produktversion."}, "en": {"prompt": "A high-fidelity prototype is automatically a released MVP.", "explain": "Fidelity describes detail. An MVP is a usable minimal product version."}}, {"slides": "38–46", "answer": 0, "de": {"prompt": "Design Thinking kann nach einem Test zu einer früheren Phase zurückkehren.", "explain": "Feedback kann eine neue Problemdefinition oder weitere Ideen nötig machen."}, "en": {"prompt": "Design thinking can return to an earlier phase after testing.", "explain": "Feedback can prompt reframing or more ideas."}}, {"slides": "38–46", "answer": 1, "de": {"prompt": "Stanford und IDEO benennen ihre Phasen identisch.", "explain": "Stanford nennt fünf Modi. IDEO verwendet Inspiration, Ideation und Implementation."}, "en": {"prompt": "Stanford and IDEO give their phases identical names.", "explain": "Stanford names five modes. IDEO uses inspiration, ideation and implementation."}}], "notes": []}</script>
+<script>
+"use strict";
+const root = document.getElementById("root");
+if (!window.React || !window.ReactDOM) {
+  root.textContent = "React konnte nicht geladen werden. Prüfe deine Internetverbindung und lade neu. / React could not load. Check your internet connection and reload.";
+} else {
+const {createElement: h, useEffect, useRef, useState} = React;
+const {kind, questions, notes} = JSON.parse(document.getElementById("study-data").textContent);
+const isReview = kind === "reviewer";
+const perSet = 10;
+const setCount = questions.length / perSet;
+const initial = {lang:"de", active:0, answers:{}, drafts:{}, reviewed:{}};
+const storeName = "progress";
+const key = "probleme-designprozesse:" + kind;
+const translations = {
+  de:{lecture:"Vorlesung 04",heading:"Probleme und Designprozesse verstehen",reviewer:"Reviewer", "multiple-choice":"Multiple Choice", "true-false":"Richtig oder Falsch", set:"Set", question:"Frage", slide:"Folie", sets:"Fragensets", jump:"Frage auswählen", previous:"Zurück", next:"Weiter", select:"Wähle eine Antwort.", check:"Antwort prüfen", correct:"Richtig", incorrect:"Falsch", true:"Richtig", false:"Falsch", solution:"Musterantwort anzeigen", hide:"Musterantwort ausblenden", write:"Deine Antwort", review:"Als gelernt markieren", undo:"Markierung entfernen", studied:"gelernt", answered:"beantwortet", notes:"Lernnotizen zur Vorlesung", source:"Quelle: Victoria Kaiselgruber, Design digitaler Produkte – Probleme und Designprozesse verstehen, WS 2026/27.", loading:"Lernstand wird geladen …", unavailable:"Lokales Speichern ist hier nicht verfügbar. Der Fortschritt bleibt nur bis zum Schließen oder Neuladen erhalten.", saving:"Wird gespeichert …", saved:"Lernstand lokal gespeichert", ready:"Lernstand lokal geladen", skip:"Zur Frage springen", comparison:"Vergleich", tryAgain:"Antwort zurücksetzen", resetSet:"Dieses Set zurücksetzen", resetConfirm:"Antworten und Lernstand für dieses Set zurücksetzen?"},
+  en:{lecture:"Lecture 04",heading:"Understanding problems and design processes",reviewer:"Reviewer", "multiple-choice":"Multiple choice", "true-false":"True or false", set:"Set", question:"Question", slide:"Slide", sets:"Question sets", jump:"Jump to a question", previous:"Previous", next:"Next", select:"Choose one answer.", check:"Check answer", correct:"Correct", incorrect:"Incorrect", true:"True", false:"False", solution:"Show model answer", hide:"Hide model answer", write:"Your answer", review:"Mark as studied", undo:"Unmark", studied:"studied", answered:"answered", notes:"Lecture study notes", source:"Source: Victoria Kaiselgruber, Design digitaler Produkte – Probleme und Designprozesse verstehen, WS 2026/27.", loading:"Loading progress …", unavailable:"Local storage is unavailable here. Your progress lasts until you close or reload this page.", saving:"Saving …", saved:"Progress saved locally", ready:"Local progress loaded", skip:"Skip to question", comparison:"Comparison", tryAgain:"Clear answer", resetSet:"Reset this set", resetConfirm:"Reset answers and progress for this set?"}
+};
+function openDb() {
+  return new Promise((resolve, reject) => {
+    const request = indexedDB.open("DDP-study-progress", 1);
+    request.onupgradeneeded = () => request.result.createObjectStore(storeName);
+    request.onsuccess = () => resolve(request.result);
+    request.onerror = () => reject(request.error);
+    request.onblocked = () => reject(new Error("Database upgrade is blocked"));
+  });
+}
+function readProgress(db) {
+  return new Promise((resolve, reject) => {
+    const transaction = db.transaction(storeName, "readonly");
+    const request = transaction.objectStore(storeName).get(key);
+    request.onsuccess = () => resolve(request.result);
+    request.onerror = () => reject(request.error);
+    transaction.onabort = () => reject(transaction.error);
+  });
+}
+function writeProgress(db, progress) {
+  return new Promise((resolve, reject) => {
+    const transaction = db.transaction(storeName, "readwrite");
+    transaction.oncomplete = resolve;
+    transaction.onabort = () => reject(transaction.error);
+    transaction.objectStore(storeName).put(progress, key);
+  });
+}
+function App() {
+  const [progress, setProgress] = useState(initial);
+  const [ready, setReady] = useState(false);
+  const [status, setStatus] = useState("loading");
+  const [picked, setPicked] = useState(null);
+  const [revealed, setRevealed] = useState(false);
+  const db = useRef(null);
+  const current = useRef(initial);
+  const revision = useRef(0);
+  const heading = useRef(null);
+  const focusNext = useRef(false);
+
+  useEffect(() => {
+    let live = true;
+    async function load() {
+      try {
+        db.current = await openDb();
+        db.current.onversionchange = () => {
+          db.current.close();
+          db.current = null;
+          if (live) setStatus("unavailable");
+        };
+        const stored = await readProgress(db.current);
+        if (!live) { db.current?.close(); return; }
+        if (stored) {
+          current.current = {...initial,...stored,
+            lang:stored.lang === "en" ? "en" : "de",
+            active:Number.isInteger(stored.active) && stored.active >= 0 && stored.active < questions.length ? stored.active : 0};
+          setProgress(current.current);
+        }
+        setStatus("ready");
+      } catch {
+        db.current?.close();
+        db.current = null;
+        if (live) setStatus("unavailable");
+      } finally {
+        if (live) setReady(true);
+      }
+    }
+    load();
+    return () => {live = false; db.current?.close();};
+  }, []);
+
+  useEffect(() => { document.documentElement.lang = progress.lang; }, [progress.lang]);
+  useEffect(() => {
+    if (focusNext.current) { heading.current?.focus(); focusNext.current = false; }
+  }, [progress.active]);
+
+  function update(patch) {
+    const snapshot = {...current.current,...patch};
+    current.current = snapshot;
+    setProgress(snapshot);
+    if (!db.current) return;
+    const version = ++revision.current;
+    setStatus("saving");
+    writeProgress(db.current, snapshot).then(
+      () => {if (version === revision.current) setStatus("saved");},
+      () => {if (version === revision.current) setStatus("unavailable");}
+    );
+  }
+  function move(target) {
+    if (target === progress.active || target < 0 || target >= questions.length) return;
+    setPicked(null);
+    setRevealed(false);
+    focusNext.current = true;
+    update({active:target});
+  }
+  const {lang,active,answers,drafts,reviewed} = progress;
+  const t = translations[lang];
+  const set = Math.floor(active / perSet);
+  const start = set * perSet;
+  const numbers = Array.from({length:perSet},(_,i)=>start+i);
+  const complete = i => isReview ? Boolean(reviewed[i]) : Number.isInteger(answers[i]);
+  const done = numbers.filter(complete).length;
+  const score = numbers.filter(i => answers[i] === questions[i].answer).length;
+  const question = questions[active];
+  const item = question[lang];
+  const checked = Number.isInteger(answers[active]);
+  const right = checked && answers[active] === question.answer;
+  const options = item.options || [t.true,t.false];
+  function resetSet() {
+    if (!window.confirm(t.resetConfirm)) return;
+    const nextAnswers = {...answers}, nextDrafts = {...drafts}, nextReviewed = {...reviewed};
+    numbers.forEach(i => {delete nextAnswers[i]; delete nextDrafts[i]; delete nextReviewed[i];});
+    setPicked(null);
+    setRevealed(false);
+    update({answers:nextAnswers,drafts:nextDrafts,reviewed:nextReviewed});
+  }
+  function clearAnswer() {
+    const next = {...answers};
+    delete next[active];
+    setPicked(null);
+    update({answers:next});
+  }
+  const header = h(React.Fragment,null,
+    h("a",{href:"#question",className:"skip"},t.skip),
+    h("header",{className:"top"},h("div",{className:"shell"},
+      h("span",{className:"brand"},"DDP · WS 2026/27"),
+      h("div",{className:"languages",role:"group","aria-label":"Sprache / Language"},
+        ...["de","en"].map(l=>h("button",{key:l,lang:l,disabled:!ready,"aria-label":l==="de"?"Deutsch":"English","aria-pressed":lang===l,onClick:()=>update({lang:l})},l.toUpperCase()))))),
+    h("section",{className:"hero"},h("div",{className:"shell"},h("div",{className:"eyebrow"},t.lecture),h("h1",null,t.heading),h("p",null,t[kind]))));
+  if (!ready) return h(React.Fragment,null,header,h("main",{className:"shell",role:"status"},t.loading));
+  const sidebar = h("aside",{className:"panel","aria-label":t.sets},
+    h("h2",{className:"meta"},t.sets),
+    h("div",{className:"sets"},...Array.from({length:setCount},(_,i)=>h("button",{key:i,"aria-pressed":i===set,"aria-label":t.set+" "+(i+1),onClick:()=>move(i*perSet)},i+1))),
+    h("p",{className:"progress"},done+" / "+perSet+" "+(isReview?t.studied:t.answered)),
+    h("progress",{max:perSet,value:done,"aria-label":isReview?t.studied:t.answered}),
+    !isReview && done>0 && h("p",{className:"progress"},t.correct+": "+score+" / "+done),
+    h("button",{disabled:!numbers.some(i=>complete(i)||Boolean(drafts[i])),onClick:resetSet},t.resetSet),
+    h("p",{className:"progress"+(status==="unavailable"?" warning":""),role:"status"},t[status]));
+  const reviewControls = isReview && h(React.Fragment,null,
+    h("label",{htmlFor:"draft"},t.write),
+    h("textarea",{id:"draft",rows:4,value:drafts[active]||"",onChange:e=>update({drafts:{...drafts,[active]:e.target.value}})}),
+    h("div",{className:"row"},
+      h("button",{className:"primary","aria-expanded":revealed,"aria-controls":"model-answer",onClick:()=>setRevealed(!revealed)},revealed?t.hide:t.solution),
+      h("button",{"aria-pressed":Boolean(reviewed[active]),onClick:()=>update({reviewed:{...reviewed,[active]:!reviewed[active]}})},reviewed[active]?t.undo:t.review)),
+    h("div",{id:"model-answer",className:"response",hidden:!revealed},
+      item.columns && h(React.Fragment,null,
+        h("table",{className:"comparison","aria-label":item.title||t.comparison},h("tbody",null,...item.columns.map(([name,value],i)=>h("tr",{key:i},h("th",{scope:"row"},name),h("td",null,value))))),
+        h("p",null,item.tradeoff)),
+      h("p",null,item.answer)));
+  const quizControls = !isReview && h(React.Fragment,null,
+    h("p",{className:"meta"},t.select),
+    h("div",{role:"group","aria-labelledby":"question"},...options.map((option,i)=>{
+      const selected = (checked ? answers[active] : picked) === i;
+      const state = checked && i===question.answer ? " good" : checked && selected ? " bad" : "";
+      return h("button",{key:i,className:"option"+state,"aria-pressed":selected,"aria-disabled":checked,
+        onClick:()=>{if(!checked)setPicked(i);}},
+        kind==="multiple-choice" && h("strong",null,String.fromCharCode(65+i)),h("span",null,option),
+        checked && i===question.answer && h("span",{"aria-label":t.correct},"✓"));
+    })),
+    checked
+      ? h(React.Fragment,null,h("div",{className:"response"+(right?"":" wrong"),role:"status"},
+          h("strong",null,right?t.correct:t.incorrect),h("p",null,item.explain)),
+          h("button",{onClick:clearAnswer},t.tryAgain))
+      : h("button",{className:"primary",disabled:picked===null,onClick:()=>update({answers:{...answers,[active]:picked}})},t.check));
+  return h(React.Fragment,null,header,
+    h("main",{className:"shell layout"},sidebar,h("div",null,
+      h("article",{className:"card","aria-labelledby":"question"},
+        h("div",{className:"row between meta"},h("span",null,t.set+" "+(set+1)+" · "+t.question+" "+(active-start+1)+" / "+perSet),h("span",null,t.slide+" "+question.slides)),
+        h("nav",{className:"numbers","aria-label":t.jump},...numbers.map(i=>h("button",{key:i,className:complete(i)?"done":"","aria-label":t.question+" "+(i-start+1)+(complete(i)?", "+(isReview?t.studied:t.answered):""),"aria-pressed":i===active,onClick:()=>move(i)},i-start+1))),
+        h("h2",{id:"question",ref:heading,tabIndex:-1},item.prompt),
+        isReview?reviewControls:quizControls,
+        h("div",{className:"row between navigation"},
+          h("button",{disabled:active===0,onClick:()=>move(active-1)},"← "+t.previous),
+          h("button",{disabled:active===questions.length-1,onClick:()=>move(active+1)},t.next+" →"))),
+      isReview && h("details",null,h("summary",null,t.notes),
+        ...notes.map(n=>h("details",{key:n.id},h("summary",null,n[lang].title+" · "+t.slide+" "+n.slides),h("div",{dangerouslySetInnerHTML:{__html:n[lang].content}})))))),
+    h("footer",null,h("div",{className:"shell"},t.source)));
+}
+ReactDOM.createRoot(root).render(h(App));
+}
+</script>
+</body>
+</html>
